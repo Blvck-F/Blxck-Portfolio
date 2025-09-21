@@ -9,21 +9,23 @@ export default function Contact() {
   const [message, setMessage] = useState("");
   const [showModal, setShowModal] = useState(false);
 
+  // URL du backend depuis le .env
+  const API_URL = import.meta.env.VITE_API_URL;
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post("https://blxck-backend.onrender.com/api-contact/contact/", {
-        name,
-        email,
-        message,
-      });
+      const res = await axios.post(API_URL, { name, email, message });
       if (res.status === 200) {
+        // Afficher le modal succès
         setShowModal(true);
+        // Reset des champs
         setName("");
         setEmail("");
         setMessage("");
       }
     } catch (err) {
+      console.error(err);
       alert("Erreur lors de l’envoi du message");
     }
   };
@@ -35,7 +37,7 @@ export default function Contact() {
       <div className="absolute -bottom-16 -right-16 w-80 h-80 bg-pink-200 opacity-20 rounded-full blur-3xl animate-pulse"></div>
 
       <div className="max-w-4xl mx-auto flex flex-col md:flex-row gap-12 items-center">
-        {/* Texte */}
+        {/* Texte & réseaux */}
         <div className="flex-1">
           <h2 className="text-4xl md:text-5xl font-bold mb-4 text-gray-900">
             Contactez-moi
@@ -45,7 +47,6 @@ export default function Contact() {
             N’hésitez pas à me contacter via le formulaire ou sur mes réseaux.
           </p>
 
-          {/* Réseaux */}
           <div className="flex gap-6 text-2xl text-gray-800">
             <a
               href="https://github.com/Blvck-F"
@@ -84,6 +85,7 @@ export default function Contact() {
               onChange={(e) => setName(e.target.value)}
               placeholder="Votre nom"
               className="px-4 py-3 rounded-lg bg-gray-100 placeholder-gray-500 focus:bg-white focus:outline-none focus:ring-2 focus:ring-purple-500 transition"
+              required
             />
             <input
               type="email"
@@ -91,12 +93,14 @@ export default function Contact() {
               onChange={(e) => setEmail(e.target.value)}
               placeholder="Votre email"
               className="px-4 py-3 rounded-lg bg-gray-100 placeholder-gray-500 focus:bg-white focus:outline-none focus:ring-2 focus:ring-purple-500 transition"
+              required
             />
             <textarea
               value={message}
               onChange={(e) => setMessage(e.target.value)}
               placeholder="Votre message"
               className="px-4 py-3 rounded-lg bg-gray-100 placeholder-gray-500 focus:bg-white focus:outline-none focus:ring-2 focus:ring-purple-500 transition resize-none h-20"
+              required
             />
             <button
               type="submit"
@@ -108,7 +112,7 @@ export default function Contact() {
         </div>
       </div>
 
-      {/* Modal de succès */}
+      {/* Modal succès */}
       <Succes isOpen={showModal} onClose={() => setShowModal(false)} />
     </section>
   );
