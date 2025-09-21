@@ -33,8 +33,8 @@ export default function Contact() {
   return (
     <section id="contact" className="px-4 py-20 relative bg-gray-50 overflow-hidden">
       {/* Décorations */}
-      <div className="absolute -top-16 -left-16 w-64 h-64 bg-purple-200 opacity-20 rounded-full blur-3xl animate-pulse"></div>
-      <div className="absolute -bottom-16 -right-16 w-80 h-80 bg-pink-200 opacity-20 rounded-full blur-3xl animate-pulse"></div>
+      <div className="absolute -top-16 -left-16 w-64 h-64 bg-purple-200 opacity-20 rounded-full blur-3xl animate-pulse pointer-events-none"></div>
+      <div className="absolute -bottom-16 -right-16 w-80 h-80 bg-pink-200 opacity-20 rounded-full blur-3xl animate-pulse pointer-events-none"></div>
 
       <div className="max-w-4xl mx-auto flex flex-col md:flex-row gap-12 items-center">
         {/* Texte & réseaux */}
@@ -84,7 +84,7 @@ export default function Contact() {
               value={name}
               onChange={(e) => setName(e.target.value)}
               placeholder="Votre nom"
-              className="px-4 py-3 rounded-lg bg-gray-100 placeholder-gray-500 focus:bg-white focus:outline-none focus:ring-2 focus:ring-purple-500 transition"
+              className="px-4 py-3 rounded-lg bg-gray-100 placeholder-gray-500 focus:bg-white focus:outline-none focus:ring-2 focus:ring-green-500 transition"
               required
             />
             <input
@@ -92,14 +92,14 @@ export default function Contact() {
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               placeholder="Votre email"
-              className="px-4 py-3 rounded-lg bg-gray-100 placeholder-gray-500 focus:bg-white focus:outline-none focus:ring-2 focus:ring-purple-500 transition"
+              className="px-4 py-3 rounded-lg bg-gray-100 placeholder-gray-500 focus:bg-white focus:outline-none focus:ring-2 focus:ring-green-500 transition"
               required
             />
             <textarea
               value={message}
               onChange={(e) => setMessage(e.target.value)}
               placeholder="Votre message"
-              className="px-4 py-3 rounded-lg bg-gray-100 placeholder-gray-500 focus:bg-white focus:outline-none focus:ring-2 focus:ring-purple-500 transition resize-none h-20"
+              className="px-4 py-3 rounded-lg bg-gray-100 placeholder-gray-500 focus:bg-white focus:outline-none focus:ring-2 focus:ring-green-500 transition resize-none h-20"
               required
             />
             <button
