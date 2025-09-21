@@ -18,7 +18,7 @@ export default function Hero() {
       <p className="text-lg md:text-2xl text-gray-700 mb-6 max-w-2xl">
         Je conçois des interfaces agréables et intuitives tout en développant
         des solutions backend avec <span className='text-blue-600 font-bold'>React</span>  et <span className='text-green-700 font-bold' >Django</span>.
-        Mon objectif : que chaque utilisateur se sente à l’aise sur mes applications.
+        Mon objectif: que chaque utilisateur se sente à l’aise sur mes applications.
       </p>
 
       {/* Skills / stack */}

@@ -19,10 +19,10 @@ DEBUG = False
 ALLOWED_HOSTS = []
 
 CORS_ALLOWED_ORIGINS = [
-    "http://localhost:5173",
+    "https://blxck-portfolio.onrender.com",
 ]
 
-CORS_ALLOW_ALL_ORIGINS = True
+CORS_ALLOW_ALL_ORIGINS = False
 
 #Configuration de l'Email Backend
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'

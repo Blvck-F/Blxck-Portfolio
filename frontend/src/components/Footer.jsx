@@ -14,7 +14,7 @@ export default function Footer() {
         {/* Réseaux sociaux */}
         <div className="flex gap-6 text-xl">
           <a
-            href="https://github.com/tonprofil"
+            href="https://github.com/Blvck-F"
             target="_blank"
             rel="noopener noreferrer"
             className="hover:text-white transition-transform transform hover:scale-110"
