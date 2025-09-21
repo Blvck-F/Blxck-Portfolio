@@ -18,7 +18,7 @@ export default function About() {
           </p>
 
           <p className="text-gray-700 text-lg md:text-xl mb-6">
-            J’ai un intérêt particulier pour le <span className='font-bold'>design responsive l’expérience utilisateur et l’optimisation des performances. </span>
+            J’ai un intérêt particulier pour le <span className='font-bold'>design responsive, l’expérience utilisateur et l’optimisation des performances. </span>
             J’adore transformer des idées en solutions concrètes, faciles à prendre en main pour les utilisateurs.
           </p>
         </div>
