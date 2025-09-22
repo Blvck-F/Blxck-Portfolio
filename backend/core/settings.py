@@ -14,12 +14,17 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = os.getenv('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = os.getenv("DEBUG", "False") == "True"
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    #"127.0.0.1",
+    #"localhost",
+    "blxck-backend.onrender.com"
+]
 
 CORS_ALLOWED_ORIGINS = [
     "https://blxck-portfolio.onrender.com",
+    #"http://localhost:5173",
 ]
 
 CORS_ALLOW_ALL_ORIGINS = False

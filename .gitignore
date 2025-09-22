@@ -8,7 +8,8 @@ pnpm-debug.log*
 lerna-debug.log*
 
 # Fichiers sensibles
-.env
+backend/.env
+frontend/.env
 
 # Node / React
 node_modules
